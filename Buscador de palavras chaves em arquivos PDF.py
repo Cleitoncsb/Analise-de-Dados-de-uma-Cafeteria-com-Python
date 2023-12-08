@@ -1,3 +1,11 @@
+#Este código é uma ferramenta automatizada para vasculhar arquivos PDF em uma 
+#pasta específica, buscando por palavras-chave predefinidas. Ele lê o conteúdo de cada 
+#PDF, identifica a presença das palavras-chave e fornece um resumo da sua ocorrência, 
+#incluindo em quais arquivos foram encontradas. A funcionalidade é útil para a análise 
+#rápida de grandes conjuntos de documentos, como na filtragem de currículos ou na revisão de 
+#literatura técnica. Além disso, o código calcula a "aderência" das palavras-chave, oferecendo 
+#uma métrica prática para avaliar a relevância dos documentos em relação às palavras-chave desejadas.
+
 import PyPDF2
 import os
 
