@@ -5,6 +5,13 @@ import numpy as np
 
 # Carregar os dados do Excel
 df = pd.read_excel('/Users/user/Downloads/Coffee_Shop_Sales.xlsx', sheet_name='Transactions')
+#Este código emprega a regressão linear para prever o volume de transações diárias em 
+uma cafeteria para os próximos seis meses, baseando-se em dados históricos. Ele ajuda a 
+entender tendências de vendas e a planejar recursos futuros, como estoque e pessoal. 
+O modelo oferece insights valiosos para a gestão de negócios, facilitando a tomada de decisões 
+estratégicas e operacionais. Ao analisar padrões passados, o código fornece uma base para expectativas 
+futuras de demanda e atividade comercial.
+
 
 # Converter a coluna de data
 df['Data_Convertida'] = pd.to_datetime(df['transaction_date'])
