@@ -6,31 +6,34 @@ import numpy as np
 # Carregar os dados do Excel
 df = pd.read_excel('/Users/user/Downloads/Coffee_Shop_Sales.xlsx', sheet_name='Transactions')
 
-# Converter a coluna de data e criar uma coluna numérica representando a data
+# Converter a coluna de data
 df['Data_Convertida'] = pd.to_datetime(df['transaction_date'])
-df['Dias'] = (df['Data_Convertida'] - df['Data_Convertida'].min()).dt.days
+
+# Contar o número de transações por dia
+df_agrupado = df.groupby('Data_Convertida').size().reset_index(name='Num_Transacoes')
 
 # Preparar os dados para a regressão
-X = df['Dias'].values.reshape(-1, 1)  # Variável independente
-y = df['transaction_id'].values       # Variável dependente
+X = (df_agrupado['Data_Convertida'] - df_agrupado['Data_Convertida'].min()).dt.days.values.reshape(-1, 1)
+y = df_agrupado['Num_Transacoes'].values
 
 # Criar e treinar o modelo de regressão linear
 modelo = LinearRegression()
 modelo.fit(X, y)
 
 # Gerar datas para os próximos 6 meses
-ultimo_dia = df['Data_Convertida'].max()
+ultimo_dia = df_agrupado['Data_Convertida'].max()
 dias_futuros = pd.date_range(start=ultimo_dia, periods=6*30) # Aprox. 6 meses
-dias_futuros_num = (dias_futuros - df['Data_Convertida'].min()).days
+dias_futuros_num = (dias_futuros - df_agrupado['Data_Convertida'].min()).days
 
 # Fazer previsões para os próximos 6 meses
 X_futuro = dias_futuros_num.values.reshape(-1, 1)
 y_pred_futuro = modelo.predict(X_futuro)
 
-# Plotar os dados originais e a linha de regressão
-plt.scatter(X, y, color='blue')
-plt.plot(X_futuro, y_pred_futuro, color='red')
+# Plotar os dados originais e a linha de regressão em um gráfico de barras
+plt.bar(X.flatten(), y, color='blue', label='Dados Originais')
+plt.bar(X_futuro.flatten(), y_pred_futuro, color='red', label='Regressão Linear')
 plt.title('Previsão de Regressão Linear para os Próximos 6 Meses')
 plt.xlabel('Dias desde o início')
-plt.ylabel('Transaction ID')
+plt.ylabel('Número de Transações')
+plt.legend()
 plt.show()
