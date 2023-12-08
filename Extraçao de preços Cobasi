@@ -1,3 +1,8 @@
+#Este código é uma ferramenta automatizada para scraping (extração) de dados de produtos 
+#de uma loja online, especificamente focada em rações para gatos. Ele usa o Selenium para 
+#navegar em várias páginas da loja Cobasi, coletando nomes e preços dos produtos. 
+
+
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import pandas as pd
