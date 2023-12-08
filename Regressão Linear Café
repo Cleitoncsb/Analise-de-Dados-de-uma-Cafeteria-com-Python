@@ -1,0 +1,36 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Carregar os dados do Excel
+df = pd.read_excel('/Users/user/Downloads/Coffee_Shop_Sales.xlsx', sheet_name='Transactions')
+
+# Converter a coluna de data e criar uma coluna numérica representando a data
+df['Data_Convertida'] = pd.to_datetime(df['transaction_date'])
+df['Dias'] = (df['Data_Convertida'] - df['Data_Convertida'].min()).dt.days
+
+# Preparar os dados para a regressão
+X = df['Dias'].values.reshape(-1, 1)  # Variável independente
+y = df['transaction_id'].values       # Variável dependente
+
+# Criar e treinar o modelo de regressão linear
+modelo = LinearRegression()
+modelo.fit(X, y)
+
+# Gerar datas para os próximos 6 meses
+ultimo_dia = df['Data_Convertida'].max()
+dias_futuros = pd.date_range(start=ultimo_dia, periods=6*30) # Aprox. 6 meses
+dias_futuros_num = (dias_futuros - df['Data_Convertida'].min()).days
+
+# Fazer previsões para os próximos 6 meses
+X_futuro = dias_futuros_num.values.reshape(-1, 1)
+y_pred_futuro = modelo.predict(X_futuro)
+
+# Plotar os dados originais e a linha de regressão
+plt.scatter(X, y, color='blue')
+plt.plot(X_futuro, y_pred_futuro, color='red')
+plt.title('Previsão de Regressão Linear para os Próximos 6 Meses')
+plt.xlabel('Dias desde o início')
+plt.ylabel('Transaction ID')
+plt.show()
