@@ -6,6 +6,12 @@ echo "# meu-projeto" >> README.md
   origem de adição remota git https://github.com/Cleitoncsb/meu-projeto.git
   git push -u origem principal
 
+#código em Python realiza uma análise de vendas de uma cafeteria a partir de dados do Excel. 
+#Ele inclui visualizações gráficas para entender melhor as tendências de vendas, como análise de vendas por dia da semana, 
+#tendência mensal de vendas, frequência de venda por tipo de produto, receita gerada por produto e o cálculo do ticket médio. 
+#Estes insights são visualizados através de gráficos de barras e linhas, oferecendo uma maneira clara e intuitiva de 
+#interpretar os padrões e performances de vendas, essenciais para estratégias de negócios e decisões operacionais.
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
