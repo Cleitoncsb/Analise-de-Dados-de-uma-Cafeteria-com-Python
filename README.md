@@ -4,7 +4,7 @@
 ![Imagem1](https://github.com/Cleitoncsb/meu-Portfolio/assets/142935223/b9bf12f2-c1a3-46af-a8a8-b2fade673657)
 
 
- <h2> Overview   </h2>
+ <h2> 📌 Overview   </h2>
  
 
 O objetivo final desse projeto é gerar indicadores e proporcionar insights sobre o desempenho das vendas da cafeteria, permitindo uma análise detalhada por diferentes dimensões (tempo, produto, localização).
@@ -65,7 +65,7 @@ Cada gráfico é criado usando plotly.express e exibido na aplicação web com s
 Os gráficos são interativos, permitindo ao usuário explorar os dados de formas diferentes.<br>
 
 
-<h2>Resultados</h2>
+<h2> 📊 Resultados</h2>
 Com base nas análises realizadas no nosso dashboard, conseguimos chegar nas seguintes conclusões:<br>
 <br>
 <br>
