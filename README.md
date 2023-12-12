@@ -66,7 +66,7 @@ Os gráficos são interativos, permitindo ao usuário explorar os dados de forma
 
 
 <h2> 📊 Resultados</h2>
-Com base nas análises realizadas no nosso dashboard, conseguimos chegar nas seguintes conclusões:<br>
+O resultado do código acima, retorna o dashboard que permiter enxergar de forma gráfica e simples, os resultados da empresa com base nas análises realizadas no nosso dashboard, conseguimos chegar nas seguintes conclusões:<br>
 <br>
 <br>
 
