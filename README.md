@@ -50,7 +50,6 @@ Cria uma lista de meses únicos presentes nos dados e permite que o usuário esc
 
 5. Visualização dos Dados Filtrados:<br>
 Mostra na aplicação web os dados filtrados pelo mês escolhido.<br>
-<br>
 
 6. Criação de Gráficos:<br>
 O código divide a tela em diferentes áreas para mostrar gráficos variados.<br>
