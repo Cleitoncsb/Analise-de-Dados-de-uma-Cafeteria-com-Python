@@ -25,39 +25,56 @@ Este script buscou responder as seguintes questões:</>
 2. Avaliar Desempenho por Dia da Semana: Entender em quais dias a cafeteria tem mais receita, o que pode influenciar estratégias de marketing ou horários de funcionamento.
 3. Comparar Filiais: Verificar qual localização da cafeteria é mais rentável, fornecendo insights para decisões estratégicas, como expansão ou marketing.
 4. Identificar Produtos Populares: Determinar quais produtossão mais vendidos, auxiliando no planejamento de estoque e desenvolvimento de produtos.
-5. Identificar Produtos com Maior Rentabilidade: Determinar quais produtos contribuem mais para o faturamento.
+5. Identificar Produtos com Maior Rentabilidade: Determinar quais produtos contribuem mais para o faturamento.<br>
+
+   Base de dados: (https://github.com/Cleitoncsb/Analise-de-Dados-de-uma-Cafeteria-com-Python/raw/main/Coffee_Shop_Sales.xlsx)
 
 <h2>Sobre a Métodologia</h2>
 A aplicaçāo utilizada no código, segue os seguintes passos:</>
 
-1. Importação de Bibliotecas:</>
+1. Importação de Bibliotecas:<br>
 Pandas: Usada para manipular e analisar dados em tabelas (chamadas de DataFrames).<br>
 Plotly.express: Uma biblioteca para criar gráficos interativos.<br>
 Streamlit: Uma biblioteca para criar aplicações web rapidamente.<br>
 
-Configuração Inicial:
+2. Configuração Inicial:<br>
 st.set_page_config(layout="wide"): Define a configuração da página da aplicação web para usar todo o espaço disponível na tela.<br>
 
-Carregar Dados do Excel:
+3. Carregar Dados do Excel:<br>
 df = pd.read_excel('/caminho/do/arquivo'): Carrega os dados de vendas de um arquivo Excel para uma tabela (DataFrame) chamada df.<br>
 
-Preparação dos Dados:
+4. Preparação dos Dados:<br>
 Converte a coluna com datas para um formato de data padrão e cria uma nova coluna chamada "Month" que contém o ano e o mês de cada venda.<br>
-
-Filtro de Mês:
+Filtro de Mês:<br>
 Cria uma lista de meses únicos presentes nos dados e permite que o usuário escolha um mês específico para visualizar, através de um menu na lateral da aplicação.<br>
 
-Visualização dos Dados Filtrados:
-Mostra na aplicação web os dados filtrados pelo mês escolhido.
-Criação de Gráficos:
-O código divide a tela em diferentes áreas para mostrar gráficos variados.
-Cria e exibe gráficos como:
-Evolução do faturamento por mês.
-Faturamento por dia da semana.
-Faturamento por filial da cafeteria.
-Faturamento por tipo de produto.
-Quantidade de vendas por tipo de produto.
+5. Visualização dos Dados Filtrados:<br>
+Mostra na aplicação web os dados filtrados pelo mês escolhido.<br>
+<br>
 
-Uso dos Gráficos:
-Cada gráfico é criado usando plotly.express e exibido na aplicação web com streamlit.
-Os gráficos são interativos, permitindo ao usuário explorar os dados de formas diferentes.
+6. Criação de Gráficos:<br>
+O código divide a tela em diferentes áreas para mostrar gráficos variados.<br>
+Cria e exibe gráficos como:<br>
+Evolução do faturamento por mês.<br>
+Faturamento por dia da semana.<br>
+Faturamento por filial da cafeteria.<br>
+Faturamento por tipo de produto.<br>
+Quantidade de vendas por tipo de produto.<br>
+
+7. Uso dos Gráficos:<br>
+Cada gráfico é criado usando plotly.express e exibido na aplicação web com streamlit.<br>
+Os gráficos são interativos, permitindo ao usuário explorar os dados de formas diferentes.<br>
+
+
+<h2>Resultados</h2>
+Com base nas análises realizadas no nosso dashboard, conseguimos chegar nas seguintes conclusões:<br>
+<br>
+<br>
+
+![Captura de Tela 2023-12-12 às 15 07 28](https://github.com/Cleitoncsb/Analise-de-Dados-de-uma-Cafeteria-com-Python/assets/142935223/c0b095c6-2ca3-4365-a423-0cf1bdec486e)
+
+1. Tendências Mensais: A empresa tem demonstrado um crescimento exponencial crescendo 200% nos 6 primeiros meses e com possibilidade de seguir cresendo.<br>
+2. Desempenho por Dia da Semana: O resultado acumulado dentro dos 6 meses, não mostrou uma variação relevante em relação aos dias da semana.<br>
+3. Filiais: O desempenho das filiais também tem se mostrado muito proximo, tornando quase igual a participação de cada uma.<br>
+4. Produtos Populares: Demonstrado os produtos mais populares.<br>
+5. Produtos com Maior Rentabilidade: em relação aos produtos mais vendidos alguns produtos podem ser mais rentaveis mesmo não sendo os mais vendidos, um exemplo disso, é o Scone, 5º produto com maior faturamento, porem sendo o 10º produto mais vendido.<br>
