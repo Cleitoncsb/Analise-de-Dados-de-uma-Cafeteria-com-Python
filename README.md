@@ -4,7 +4,7 @@
 ![Imagem1](https://github.com/Cleitoncsb/meu-Portfolio/assets/142935223/b9bf12f2-c1a3-46af-a8a8-b2fade673657)
 
 
- <h2> 📌    Overview   </h2>
+ <h2> Overview   </h2>
  
 
 O objetivo final desse projeto é gerar indicadores e proporcionar insights sobre o desempenho das vendas da cafeteria, permitindo uma análise detalhada por diferentes dimensões (tempo, produto, localização).
@@ -27,5 +27,37 @@ Este script buscou responder as seguintes questões:</>
 4. Identificar Produtos Populares: Determinar quais produtossão mais vendidos, auxiliando no planejamento de estoque e desenvolvimento de produtos.
 5. Identificar Produtos com Maior Rentabilidade: Determinar quais produtos contribuem mais para o faturamento.
 
+<h2>Sobre a Métodologia</h2>
+A aplicaçāo utilizada no código, segue os seguintes passos:</>
 
+1. Importação de Bibliotecas:</>
+Pandas: Usada para manipular e analisar dados em tabelas (chamadas de DataFrames).<br>
+Plotly.express: Uma biblioteca para criar gráficos interativos.<br>
+Streamlit: Uma biblioteca para criar aplicações web rapidamente.<br>
 
+Configuração Inicial:
+st.set_page_config(layout="wide"): Define a configuração da página da aplicação web para usar todo o espaço disponível na tela.<br>
+
+Carregar Dados do Excel:
+df = pd.read_excel('/caminho/do/arquivo'): Carrega os dados de vendas de um arquivo Excel para uma tabela (DataFrame) chamada df.<br>
+
+Preparação dos Dados:
+Converte a coluna com datas para um formato de data padrão e cria uma nova coluna chamada "Month" que contém o ano e o mês de cada venda.<br>
+
+Filtro de Mês:
+Cria uma lista de meses únicos presentes nos dados e permite que o usuário escolha um mês específico para visualizar, através de um menu na lateral da aplicação.<br>
+
+Visualização dos Dados Filtrados:
+Mostra na aplicação web os dados filtrados pelo mês escolhido.
+Criação de Gráficos:
+O código divide a tela em diferentes áreas para mostrar gráficos variados.
+Cria e exibe gráficos como:
+Evolução do faturamento por mês.
+Faturamento por dia da semana.
+Faturamento por filial da cafeteria.
+Faturamento por tipo de produto.
+Quantidade de vendas por tipo de produto.
+
+Uso dos Gráficos:
+Cada gráfico é criado usando plotly.express e exibido na aplicação web com streamlit.
+Os gráficos são interativos, permitindo ao usuário explorar os dados de formas diferentes.
