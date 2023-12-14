@@ -34,6 +34,11 @@ O resultado do código acima, retorna o dashboard que permiter enxergar de forma
 
 ![Captura de Tela 2023-12-12 às 15 07 28](https://github.com/Cleitoncsb/Analise-de-Dados-de-uma-Cafeteria-com-Python/assets/142935223/c0b095c6-2ca3-4365-a423-0cf1bdec486e)
 
+Sabendo da necessidade de criar boas visões, também foi criada uma visão em Power BI, apresentando os mesmos dados. <br>
+Link para acesso do Dashboard em Power BI online.
+
+<img width="614" alt="Analise Cafeteria PowerBi" src="https://github.com/Cleitoncsb/Analise-de-Dados-de-uma-Cafeteria-com-Python-e-PowerBI/assets/142935223/af11bed4-d127-4170-bb19-2d7f84d0e437">
+
 1. Tendências Mensais: A empresa demonstrou um crescimento exponencial de 200% nos primeiros seis meses e possui potencial para continuar crescendo.
 2. Desempenho por Dia da Semana: O resultado acumulado nos seis meses não apresentou variação relevante em relação aos dias da semana.
 3. Filiais: O desempenho das filiais tem se mostrado muito similar, com participações quase iguais entre elas.
